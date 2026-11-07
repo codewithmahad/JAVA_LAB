@@ -23,7 +23,7 @@ I study Java and DSA alongside application development, usually through focused 
   <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
   <a href="#working-setup">Setup</a> &nbsp;·&nbsp;
-  <a href="#beyond-java-lab">Beyond&nbsp;the&nbsp;lab</a>
+  <a href="#beyond-java-lab">Connected&nbsp;labs</a>
 </p>
 
 <h2 id="java-learning-map">Java learning map</h2>
@@ -183,23 +183,20 @@ Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal
     <source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-notebook-dark.svg">
     <img src="assets/readme/lab-notebook-light.svg" align="right" width="20%" alt="An open code notebook with a blue cover, an orange bookmark, and a pencil.">
   </picture>
-  Beyond the lab
+  How the labs fit together
 </h2>
 
-The Java work here sits alongside **DSA** for problem solving and comparing approaches, and **SQL** for modelling and querying data. I want that practice to show up in the backend code I write, and in how well I can explain it.
-
 <p>
-  <a href="https://github.com/codewithmahad/JAVA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-java-dark.svg"><img src="assets/readme/lab-java-light.svg" width="86" height="22" alt="Java Lab"></picture></a>
-  <a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="86" height="22" alt="DSA Lab"></picture></a>
-  <a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="86" height="22" alt="SQL Lab"></picture></a>
+  This lab is where I work through Java itself. I also use Java for problem solving in&#8239;<a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="77" height="20" align="texttop" alt="DSA_LAB"></picture></a>, comparing approaches and their time and space costs.
+  Backend work depends just as much on how I model and query data, so that practice has its own space in&#8239;<a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="80" height="20" align="texttop" alt="SQL_LAB"></picture></a>.
+  My Linux and Bash notes from OS coursework live in&#8239;<a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="96" height="20" align="texttop" alt="LINUX_LAB"></picture></a>.
 </p>
 
-<p><sub>For my OS coursework:</sub> <a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="82" height="20" alt="Linux Lab"></picture></a></p>
+<br clear="right">
 
-<p>
-  <a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp;
-  <a href="https://shaikhmahad.vercel.app/">Portfolio</a>
-  <br clear="right">
+---
+
+<p align="center">
+  <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
+  <sub><a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
 </p>
-
-<p><sub><a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub></p>
