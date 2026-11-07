@@ -1,114 +1,187 @@
-# JAVA_LAB
+<h1 id="java_lab">
+  <a href="https://dev.java/"><img src="assets/logos/java.svg" align="right" width="88" alt="Java coffee-cup mark."></a>
+  JAVA_LAB
+</h1>
 
-> A long-term workspace for mastering the Java language through continuous learning, practice, and exploration.
+**Java concepts, runnable experiments, and the things I want to remember.**
 
----
+<sub>Core Java · Language experiments · JVM understanding · Revision</sub>
 
-## Overview
+I keep this Java-only workspace alongside my **Java/Spring Boot backend projects**. It's where I want to work through language questions in small programs, save the results, and leave enough context to understand them months later. The code, corrections, and Git history will keep a record of that practice.
 
-**JAVA_LAB** is a permanent repository dedicated exclusively to the **Java programming language**.
+**Starting point:** [Maven project configured for Java 25](pom.xml). Java source files and experiment notes are still to be added.
 
-This repository is **not** a Spring Boot project, backend application, or framework showcase. Its sole purpose is to build and maintain a deep understanding of Java itself—from core language fundamentals to advanced platform features, JVM internals, concurrency, and modern language evolution.
+<p>
+  <a href="#java-learning-map">Learning map</a> &nbsp;·&nbsp;
+  <a href="#recorded-experiments">Experiments</a> &nbsp;·&nbsp;
+  <a href="#working-setup">Working setup</a> &nbsp;·&nbsp;
+  <a href="#revision-notes">Revision notes</a>
+</p>
 
-It is designed as a **living workspace** that grows incrementally over time as new concepts are studied, implemented, experimented with, and revisited.
+<h2 id="java-learning-map">Java learning map</h2>
 
----
+The areas I want to study and revisit. **All six groups are planned.** Topic names will link to source files as I add experiments.
 
-## Purpose
+<details>
+<summary><strong>01 · Language fundamentals and OOP</strong></summary>
 
-This repository exists to:
+- Types, operators, control flow, methods, arrays, and strings.
+- Classes, constructors, access modifiers, encapsulation, and composition.
+- Inheritance, interfaces, abstract classes, and polymorphism.
+- Enums, records, immutability, and object identity versus equality.
 
-* Strengthen Java fundamentals through practical coding.
-* Explore modern Java language features introduced in recent JDK releases.
-* Understand how the JVM works beyond everyday programming.
-* Maintain a structured reference for revision and experimentation.
-* Continuously improve Java proficiency through hands-on practice.
-* Keep Java knowledge current as the language evolves over time.
+</details>
 
----
+<details>
+<summary><strong>02 · Collections, generics, and exceptions</strong></summary>
 
-## Repository Organization
+- `List`, `Set`, `Map`, queues, iteration, and choosing a collection.
+- `equals()`, `hashCode()`, ordering, `Comparable`, and `Comparator`.
+- Generic types and methods, bounds, wildcards, and type erasure.
+- Checked and unchecked exceptions, custom exceptions, and resource cleanup.
 
-The repository follows a consistent package structure that expands as new topics are studied.
+</details>
 
-Packages are created and populated **only after the corresponding concepts have been learned and implemented**, making the repository an accurate record of continuous Java practice rather than a collection of pre-generated examples.
+<details>
+<summary><strong>03 · Functional Java and I/O</strong></summary>
 
-Planned organizational areas include:
+- Lambdas, functional interfaces, and method references.
+- Streams, collectors, `Optional`, and comparisons with ordinary loops.
+- Byte and character streams, encodings, and file handling.
+- `Path`, `Files`, NIO, serialization, and deserialization.
 
-| Area         | Focus                                                                                   |
-| ------------ | --------------------------------------------------------------------------------------- |
-| Fundamentals | Core Java syntax, data types, control flow, methods, arrays, and strings                |
-| OOP          | Classes, objects, inheritance, polymorphism, abstraction, encapsulation, and interfaces |
-| Exceptions   | Exception handling, custom exceptions, and error management                             |
-| Collections  | Lists, sets, maps, queues, sorting, and the Collections Framework                       |
-| Generics     | Generic classes, methods, wildcards, and type-safe programming                          |
-| I/O          | File handling, streams, NIO, and data persistence                                       |
-| Functional   | Lambdas, Streams API, Optional, and functional interfaces                               |
-| Concurrency  | Threads, synchronization, executors, virtual threads, and concurrent programming        |
-| Modern Java  | Features introduced in recent Java releases                                             |
-| JVM          | Memory model, garbage collection, class loading, reflection, annotations, and bytecode  |
-| Playground   | Experiments, prototypes, benchmarks, and miscellaneous Java explorations                |
+</details>
 
-The actual codebase will evolve gradually as these areas are explored over time.
+<details>
+<summary><strong>04 · Concurrency</strong></summary>
 
----
+- Threads, shared mutable state, race conditions, and visibility.
+- Synchronization, locks, atomics, and concurrent collections.
+- Executors, task cancellation, futures, and `CompletableFuture`.
+- Virtual threads and the difference between concurrency and parallelism.
 
-## Development Approach
+</details>
 
-This repository is maintained incrementally.
+<details>
+<summary><strong>05 · JVM and language internals</strong></summary>
 
-A topic is added only when it has been:
+- Source code, bytecode, class loading, and initialization.
+- Stack frames, heap objects, references, and garbage collection.
+- The Java Memory Model and happens-before relationships.
+- Reflection, annotations, and inspecting bytecode with `javap`.
 
-1. Studied
-2. Understood
-3. Implemented in code
-4. Organized within the repository
+</details>
 
-This approach ensures that the repository reflects **real learning and real practice**, not placeholder content.
+<details>
+<summary><strong>06 · Modern Java and experiments</strong></summary>
 
----
+- Switch expressions, pattern matching, and sealed types.
+- Language changes across JDK versions, including preview features.
+- Small API comparisons and experiments that test an assumption.
+- Performance measurements with warmup, repeatable inputs, and JMH.
 
-## Environment
+</details>
 
-| Component       | Technology                  |
-| --------------- | --------------------------- |
-| Language        | Java                        |
-| JDK             | Latest LTS / Current Stable |
-| Build Tool      | Maven                       |
-| IDE             | IntelliJ IDEA               |
-| Version Control | Git + GitHub                |
+<h2 id="recorded-experiments">Recorded experiments</h2>
 
----
+No Java experiments are committed yet. This section will become a short index of the examples worth returning to, each linked to its code and observed result.
 
-## What You Will Find Here Over Time
+<details>
+<summary><strong>Questions for the first experiments · planned</strong></summary>
 
-As the repository grows, it will contain:
+| Question to test | What I want to compare |
+| :--- | :--- |
+| When do `==` and `equals()` disagree? | Same reference, equal values, and separately created objects. |
+| What if a `HashMap` key changes? | Lookup before and after changing state used by `equals()` and `hashCode()`. |
+| When is a stream easier to read? | The same transformation as a loop and a stream, including empty input. |
+| What breaks with shared mutable data? | An unprotected counter and a synchronized or atomic version. |
+| How does resource cleanup behave? | `try-with-resources` on normal completion and when an exception is thrown. |
 
-* Runnable Java examples
-* Concept-focused implementations
-* Experiments with new language features
-* JVM and memory-related explorations
-* Concurrency demonstrations
-* Code written specifically for understanding, revision, and long-term reference
+</details>
 
-Earlier implementations may be revisited and improved as my understanding of Java becomes more advanced.
+<h2 id="java-in-practice">Java in practice</h2>
 
----
+My approach here is to start with a question, predict the result, and write the smallest program that can check it. Then change an input or assumption and explain the difference. When I get something wrong, I want to keep the correction beside the code.
 
-## Repository Philosophy
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/java-execution-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/readme/java-execution-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/java-execution-dark.svg">
+  <img src="assets/readme/java-execution-light.svg" width="100%" alt="Java execution overview: javac compiles .java source into .class bytecode; the java launcher starts the JVM to load and execute the program.">
+</picture>
 
-This repository is intentionally designed to remain active throughout my university journey and professional career.
+<sub>A simplified view of the explicit compile-and-run path. See the JDK 25 command references for <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> and <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub>
 
-Learning in software engineering does not stop after a course, a semester, or a job offer. New Java versions, APIs, language features, and best practices continue to emerge, and this workspace is intended to evolve alongside that ongoing learning process.
+For each useful experiment, I'll keep the **question, JDK version, run command, expected result, actual result, and explanation** together. A later revision should let me rerun it and explain the behaviour without relying on the old comments.
 
----
+<h2 id="working-setup">Working setup</h2>
 
-**Status:** Active and continuously evolving.
+**JDK 25 · Maven · IntelliJ IDEA · Git**
 
+The [POM](pom.xml) sets both compiler source and target to **25**. JDK 25 is the baseline for this workspace; preview features are not enabled in the current configuration.
 
+<details>
+<summary><strong>Open and check the workspace</strong></summary>
 
-As Java evolves, this repository evolves with it.
+```sh
+git clone https://github.com/codewithmahad/JAVA_LAB.git
+cd JAVA_LAB
+java -version
+javac -version
+mvn -version
+mvn compile
+```
 
----
+Check that Maven reports JDK 25 as well. There's no Maven Wrapper in this repository, so the terminal commands use a local Maven installation. In IntelliJ IDEA, open `pom.xml` as a project and select JDK 25 for the project and Maven runner.
 
-*Learning never finishes. Neither does this repository.*
+At this stage, compilation has no Java source files to process.
+
+</details>
+
+<details>
+<summary><strong>Run an entry once source is added</strong></summary>
+
+I'll use Maven's [standard source layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html): `src/main/java/` for examples and `src/test/java/` for tests where useful. Those directories aren't present yet; topic packages will be added with their first implementation.
+
+For a compiled example with a `main` method, the command pattern is:
+
+```sh
+mvn compile
+java -cp target/classes fully.qualified.ClassName
+```
+
+Replace `fully.qualified.ClassName` with the entry's actual package and class name. Each recorded experiment will include its exact command. IntelliJ's run action is another option once that entry exists.
+
+</details>
+
+<h2 id="revision-notes">Revision notes</h2>
+
+The notes I want beside an experiment are the details I'd otherwise forget: which input exposed the mistake, why the first explanation was wrong, and what changed after the fix.
+
+<details>
+<summary><strong>Things Java taught me</strong></summary>
+
+I'll add conclusions here as experiments are recorded, with a link back to the code that supports each one. Each note should preserve the original assumption, the result, and the edge case worth remembering.
+
+</details>
+
+<details>
+<summary><strong>References I want within reach · Java 25</strong></summary>
+
+- **API contracts:** [Java SE 25 API](https://docs.oracle.com/en/java/javase/25/docs/api/index.html).
+- **Language rules:** [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se25/html/index.html).
+- **Runtime behaviour:** [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se25/html/index.html).
+- **Explanations and examples:** [Dev.java learning topics](https://dev.java/learn/).
+
+</details>
+
+<h2 id="beyond-java-lab">Beyond JAVA_LAB</h2>
+
+Java is the language behind my backend direction. In [**DeployLatch**](https://github.com/codewithmahad/deploylatch), a Java service gives me something concrete to deploy, check, and recover on Linux.
+
+The other labs hold the work around it: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB) for problem solving, [**SQL_LAB**](https://github.com/codewithmahad/SQL_LAB) for queries and relational design, and [**LINUX_LAB**](https://github.com/codewithmahad/LINUX_LAB) for Linux and Bash practice.
+
+<p align="center">
+  <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
+  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad?tab=repositories">Projects</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
+</p>
