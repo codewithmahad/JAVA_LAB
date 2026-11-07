@@ -22,29 +22,28 @@ I study Java and DSA alongside application development, usually through focused 
 <p>
   <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
-  <a href="#working-setup">Build&nbsp;&amp;&nbsp;run</a> &nbsp;·&nbsp;
+  <a href="#working-setup">Setup</a> &nbsp;·&nbsp;
   <a href="#beyond-java-lab">Beyond&nbsp;the&nbsp;lab</a>
 </p>
 
 <table id="current-focus">
   <tbody>
-    <tr><th scope="row">Recorded</th><td><a href="pom.xml">Java 25 / Maven setup</a>. No Java sources or tests yet.</td></tr>
+    <tr><th scope="row">Recorded</th><td><a href="pom.xml">Java 25 / Maven setup</a>. No lab examples or tests yet.</td></tr>
     <tr><th scope="row">Next</th><td>Object identity and equality: <code>==</code> versus <code>equals()</code>.</td></tr>
   </tbody>
 </table>
 
 <h2 id="java-learning-map">Java learning map</h2>
 
-My planned coverage for backend work: everyday language and APIs first, then runtime questions in more depth. Topic links will open recorded examples or notes.
+My planned coverage for backend work: everyday language and APIs first, then runtime questions in more depth.
 
 <details>
 <summary><strong>01 · Language fundamentals and OOP</strong></summary>
 
 **Core**
 
-- Types, control flow, methods, arrays, strings, and reference versus value equality.
+- Types, control flow, methods, arrays, strings, object identity, and logical equality.
 - Classes, constructors, interfaces, inheritance, polymorphism, and composition.
-- Checking behaviour with JUnit assertions, boundary cases, and expected exceptions.
 
 **Next:** enums, records, immutable objects, and defensive copying.
 
@@ -56,23 +55,28 @@ My planned coverage for backend work: everyday language and APIs first, then run
 **Core**
 
 - Choosing a `List`, `Set`, `Map`, or queue; iteration and collection behaviour.
-- `equals()`, `hashCode()`, generic types, bounds, and wildcards.
+- Equality and hashing contracts — `equals()` and `hashCode()`.
+- Generic types, bounds, and wildcards.
 - Checked and unchecked exceptions, propagation, wrapping, and useful error context.
 
 **Next:** mutable keys, ordering, `Comparable`, and `Comparator`.
+
+**Deep dive:** type erasure and its effects on generic code.
 
 </details>
 
 <details>
 <summary><strong>03 · Functional Java and platform APIs</strong></summary>
 
-**Core:** lambdas, method references, streams, collectors, `Optional`, and comparisons with loops.
+**Core**
+
+- Lambdas, method references, streams, collectors, `Optional`, and comparisons with loops.
+- `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
+- `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
 
 **Next**
 
 - File I/O, encodings, `Path`, `Files`, and `try-with-resources`.
-- `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
-- `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
 - Small HTTP client and JDBC exercises, independent of a framework.
 
 </details>
@@ -99,7 +103,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 
 **Deep dive**
 
-- Class loading, initialization, reflection, annotations, and type erasure.
+- Class loading, initialization, reflection, and annotations.
 - The Java Memory Model, happens-before relationships, and GC diagnostics.
 
 </details>
@@ -123,10 +127,10 @@ My planned coverage for backend work: everyday language and APIs first, then run
 
 I start with a prediction, test it in a small program, and try an edge case. When I return to it, I explain the result before opening my notes.
 
-**What I keep:** the question, exact command, result, and the detail that changed my understanding.
+**From my projects:** [DemoServer.java in DeployLatch](https://github.com/codewithmahad/deploylatch/blob/main/demo-app/src/main/java/dev/deploylatch/demo/DemoServer.java) — release settings, validation, and `try-with-resources`.
 
 <details>
-<summary><strong>Questions and what to record</strong></summary>
+<summary><strong>Upcoming experiments</strong></summary>
 
 | Question | Comparison to make |
 | :--- | :--- |
@@ -135,9 +139,9 @@ I start with a prediction, test it in a small program, and try an edge case. Whe
 | Can equal decimal values compare differently? | `BigDecimal.equals()` and `compareTo()`, with different scales. |
 | When does a resource close? | Normal completion, an exception, and cleanup that also fails. |
 
-Beside each example: **question · prediction · JDK version · run command · observed result · explanation**. A comment is enough for a simple observation; a test makes important behaviour easy to check again.
+**Checks across topics:** normal input, boundaries, and expected exceptions. Add JUnit tests when repeatable checks help preserve the behaviour.
 
-For **Things Java taught me**, keep one finding tied to its source, including the input that exposed the mistake.
+**Things Java taught me:** keep the initial assumption, observed result, explanation, and useful edge case beside the source, with the exact run command and JDK version.
 
 </details>
 
@@ -157,7 +161,7 @@ The [POM](pom.xml) sets compiler source and target to **25**, with no preview fe
 <p><sub>The compile-and-run path in Maven's standard layout. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub></p>
 
 <details>
-<summary><strong>Open, check, and run</strong></summary>
+<summary><strong>Open and check</strong></summary>
 
 ```sh
 git clone https://github.com/codewithmahad/JAVA_LAB.git
@@ -168,20 +172,11 @@ mvn -version
 mvn validate
 ```
 
-`mvn validate` checks the project configuration. Compilation and execution follow with the first source example.
+`mvn validate` checks the project configuration.
 
 Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal commands need a local Maven installation. In IntelliJ IDEA, open `pom.xml` and select JDK 25 for the project and Maven runner.
 
-Use `src/main/java/` for examples and `src/test/java/` for tests. JUnit needs to be added to the POM with the first test.
-
-For an entry with a `main` method, the command pattern is:
-
-```sh
-mvn compile
-java -cp target/classes fully.qualified.ClassName
-```
-
-Replace `fully.qualified.ClassName` with the entry's actual package and class.
+JUnit needs to be added to the POM with the first test.
 
 </details>
 
@@ -202,5 +197,5 @@ Alongside this notebook: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB)
 
 <p align="center">
   <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
-  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad?tab=repositories">Projects</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
+  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad/deploylatch">DeployLatch</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
 </p>
