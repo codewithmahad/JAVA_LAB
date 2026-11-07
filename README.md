@@ -179,14 +179,7 @@ Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal
 </details>
 
 <!-- learning-labs:start -->
-<p id="connected-labs" role="heading" aria-level="2">
-  <a id="beyond-java-lab"></a>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-notebook-dark.svg">
-    <img src="assets/readme/lab-notebook-light.svg" align="right" width="16%" alt="An open code notebook with a blue cover, an orange bookmark, and a pencil.">
-  </picture>
-  <strong>How the labs fit together</strong>
-</p>
+<h2 id="connected-labs"><a id="beyond-java-lab"></a>How the labs fit together</h2>
 
 <p>
 This is where I work through Java itself. I use the language for problem solving in DSA, and keep queries and relational design in SQL. My Linux and Bash notes come from OS coursework.
@@ -201,9 +194,9 @@ This is where I work through Java itself. I use the language for problem solving
 <p>I also keep my wider coding practice on these profiles.</p>
 
 <p>
-  <a href="https://leetcode.com/u/mahad2006/"><img src="assets/readme/leetcode-brand.svg" width="110" height="40" alt="LeetCode: my profile"></a>
-  <a href="https://www.hackerrank.com/codewithmahad"><img src="assets/readme/hackerrank-brand.svg" width="126" height="40" alt="HackerRank: my profile"></a>
-  <a href="https://codolio.com/profile/codewithmahad"><img src="assets/readme/codolio-brand.svg" width="104" height="40" alt="Codolio: my profile"></a>
+  <a href="https://leetcode.com/u/mahad2006/"><img src="assets/readme/leetcode-brand.svg" width="124" height="40" alt="LeetCode: my profile"></a>
+  <a href="https://www.hackerrank.com/codewithmahad"><img src="assets/readme/hackerrank-brand.svg" width="140" height="40" alt="HackerRank: my profile"></a>
+  <a href="https://codolio.com/profile/codewithmahad"><img src="assets/readme/codolio-brand.svg" width="120" height="40" alt="Codolio: my profile"></a>
 </p>
 <!-- learning-labs:end -->
 
