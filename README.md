@@ -23,7 +23,7 @@ I study Java and DSA alongside application development, usually through focused 
   <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
   <a href="#working-setup">Setup</a> &nbsp;·&nbsp;
-  <a href="#beyond-java-lab">Connected&nbsp;labs</a>
+  <a href="#connected-labs">Connected&nbsp;labs</a>
 </p>
 
 <h2 id="java-learning-map">Java learning map</h2>
@@ -178,25 +178,35 @@ Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal
 
 </details>
 
-<h2 id="beyond-java-lab">
+<!-- learning-labs:start -->
+<p id="connected-labs" role="heading" aria-level="2">
+  <a id="beyond-java-lab"></a>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-notebook-dark.svg">
-    <img src="assets/readme/lab-notebook-light.svg" align="right" width="20%" alt="An open code notebook with a blue cover, an orange bookmark, and a pencil.">
+    <img src="assets/readme/lab-notebook-light.svg" align="right" width="16%" alt="An open code notebook with a blue cover, an orange bookmark, and a pencil.">
   </picture>
-  How the labs fit together
-</h2>
-
-<p>
-  This lab is where I work through Java itself. I also use Java for problem solving in&#8239;<a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="77" height="20" align="texttop" alt="DSA_LAB"></picture></a>, comparing approaches and their time and space costs.
-  Backend work depends just as much on how I model and query data, so that practice has its own space in&#8239;<a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="80" height="20" align="texttop" alt="SQL_LAB"></picture></a>.
-  My Linux and Bash notes from OS coursework live in&#8239;<a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="96" height="20" align="texttop" alt="LINUX_LAB"></picture></a>.
+  <strong>How the labs fit together</strong>
 </p>
 
-<br clear="right">
+<p>
+This is where I work through Java itself. In&#8239;<a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="77" height="20" align="texttop" alt="DSA_LAB"></picture></a>, I use the language to solve problems and compare approaches.
+<a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="80" height="20" align="texttop" alt="SQL_LAB"></picture></a> holds my query and database design practice, while&#8239;<a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="96" height="20" align="texttop" alt="LINUX_LAB"></picture></a> keeps the Linux and Bash notes from my OS coursework.
+</p>
 
----
+<p>
+  <a href="https://leetcode.com/u/mahad2006/"><img src="assets/readme/leetcode-brand.svg" width="83" height="30" alt="LeetCode: my profile"></a>
+  <a href="https://www.hackerrank.com/codewithmahad"><img src="assets/readme/hackerrank-brand.svg" width="95" height="30" alt="HackerRank: my profile"></a>
+  <a href="https://codolio.com/profile/codewithmahad"><img src="assets/readme/codolio-brand.svg" width="78" height="30" alt="Codolio: my profile"></a>
+</p>
+<!-- learning-labs:end -->
+
+<hr>
 
 <p align="center">
-  <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
-  <sub><a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
+  <sub>
+    Maintained by <a href="https://github.com/codewithmahad">Shaikh Mahad</a>
+    &nbsp;·&nbsp; <a href="https://shaikhmahad.vercel.app/">Portfolio</a>
+    &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a>
+    &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a>
+  </sub>
 </p>
