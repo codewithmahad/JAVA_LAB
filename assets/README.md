@@ -1,6 +1,6 @@
 # README artwork
 
-Local artwork for the Java notebook: a compact title, the Java mark, and an open, numbered compile-and-run sequence. The title and diagram have light and dark versions; the diagram also has a vertical layout for narrow screens.
+Local artwork for the Java notebook: a compact title, the Java mark, an open, numbered compile-and-run sequence, and a closing illustration with small lab links. The original artwork has light and dark versions; the execution diagram also has a vertical layout for narrow screens.
 
 | File | Source and purpose |
 | :--- | :--- |
@@ -8,6 +8,8 @@ Local artwork for the Java notebook: a compact title, the Java mark, and an open
 | `logos/java-site.svg` | The same mark with its colors adapted to the Java.com palette; the original geometry is retained. |
 | `readme/java-title-*.svg` | Original title using Segoe UI Bold, converted to vector paths so it renders consistently without a font download. |
 | `readme/java-execution*.svg` | Original execution sketch: source → class files → JVM, annotated with the lab's standard Maven source and output paths. |
+| `readme/lab-notebook-*.svg` | Original open-notebook illustration for the closing section: code, revision notes, a bookmark, and a pencil. Its shape can be reused across learning labs, with accents adapted to each lab. |
+| `readme/lab-{java,dsa,sql,linux}-{light,dark}.svg` | Compact links for the learning labs, following the small inline-button format used in my profile's typing section. Java uses the adapted Devicon mark; the tree, database, and terminal symbols are original. Labels use Segoe UI Semibold converted to paths. Linux has a smaller, neutral treatment as a coursework lab. |
 
 The execution sketch follows the JDK 25 command references for [javac](https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html) and [java](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html), alongside Maven's [source layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html) and [compiler output](https://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#outputDirectory). It describes the explicit compile-and-run path and is a conceptual reference, not evidence of a recorded experiment.
 

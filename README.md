@@ -19,11 +19,6 @@ I study Java and DSA alongside application development, usually through focused 
 
 </details>
 
-<p id="current-focus">
-  <strong>Next in the lab:</strong> object identity and equality — <code>==</code> versus <code>equals()</code>.<br>
-  <sub><a href="pom.xml">JDK 25 · Maven</a> · first examples and tests planned.</sub>
-</p>
-
 <p>
   <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
@@ -33,7 +28,7 @@ I study Java and DSA alongside application development, usually through focused 
 
 <h2 id="java-learning-map">Java learning map</h2>
 
-My planned coverage for backend work: everyday language and APIs first, then runtime questions in more depth.
+Language and API topics for backend work, from everyday Java to runtime behaviour.
 
 <details>
 <summary><strong>01 · Language fundamentals and OOP</strong></summary>
@@ -43,7 +38,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 - Types, control flow, methods, arrays, strings, object identity, and logical equality.
 - Classes, constructors, interfaces, inheritance, polymorphism, and composition.
 
-**Next:** enums, records, immutable objects, and defensive copying.
+**Applied:** enums, records, immutable objects, and defensive copying.
 
 </details>
 
@@ -57,7 +52,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 - Generic types, bounds, and wildcards.
 - Checked and unchecked exceptions, propagation, wrapping, and useful error context.
 
-**Next:** mutable keys, ordering, `Comparable`, and `Comparator`.
+**Applied:** mutable keys, ordering, `Comparable`, and `Comparator`.
 
 **Deep dive:** type erasure and its effects on generic code.
 
@@ -72,7 +67,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 - `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
 - `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
 
-**Next**
+**Applied**
 
 - File I/O, encodings, `Path`, `Files`, and `try-with-resources`.
 - Small HTTP client and JDBC exercises, independent of a framework.
@@ -82,7 +77,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 <details>
 <summary><strong>04 · Concurrency and shared state</strong></summary>
 
-**Next**
+**Applied**
 
 - Threads, race conditions, visibility, synchronization, and atomic operations.
 - Executors, futures, cancellation, and concurrent collections.
@@ -94,7 +89,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 <details>
 <summary><strong>05 · JVM, diagnostics, and internals</strong></summary>
 
-**Next**
+**Applied**
 
 - Source and bytecode, stack frames, heap objects, references, and garbage collection basics.
 - Reading stack traces and inspecting a running program with JDK tools.
@@ -109,7 +104,7 @@ My planned coverage for backend work: everyday language and APIs first, then run
 <details>
 <summary><strong>06 · Modern Java and measured experiments</strong></summary>
 
-**Next**
+**Applied**
 
 - Switch expressions, pattern matching, and sealed types in small examples.
 - JDK version comparisons and the requirements of preview features.
@@ -125,10 +120,8 @@ My planned coverage for backend work: everyday language and APIs first, then run
 
 I start with a prediction, test it in a small program, and try an edge case. When I return to it, I explain the result before opening my notes.
 
-**From my projects:** [DemoServer.java in DeployLatch](https://github.com/codewithmahad/deploylatch/blob/main/demo-app/src/main/java/dev/deploylatch/demo/DemoServer.java) — release settings, validation, and `try-with-resources`.
-
 <details>
-<summary><strong>Upcoming experiments</strong></summary>
+<summary><strong>Questions worth testing</strong></summary>
 
 | Question | Comparison to make |
 | :--- | :--- |
@@ -174,8 +167,6 @@ mvn validate
 
 Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal commands need a local Maven installation. In IntelliJ IDEA, open `pom.xml` and select JDK 25 for the project and Maven runner.
 
-JUnit needs to be added to the POM with the first test.
-
 </details>
 
 <details>
@@ -187,13 +178,28 @@ JUnit needs to be added to the POM with the first test.
 
 </details>
 
-<h2 id="beyond-java-lab">Beyond JAVA_LAB</h2>
+<h2 id="beyond-java-lab">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-notebook-dark.svg">
+    <img src="assets/readme/lab-notebook-light.svg" align="right" width="20%" alt="An open code notebook with a blue cover, an orange bookmark, and a pencil.">
+  </picture>
+  Beyond the lab
+</h2>
 
-I use [**DeployLatch**](https://github.com/codewithmahad/deploylatch) to deploy and recover a Java service on Linux. This notebook is where I can return to the language questions behind that work.
+The Java work here sits alongside **DSA** for problem solving and comparing approaches, and **SQL** for modelling and querying data. I want that practice to show up in the backend code I write, and in how well I can explain it.
 
-Alongside this notebook: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB) for problem solving · [**SQL_LAB**](https://github.com/codewithmahad/SQL_LAB) for queries and relational design · [**LINUX_LAB**](https://github.com/codewithmahad/LINUX_LAB) for Linux and Bash.
-
-<p align="center">
-  <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
-  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad?tab=repositories">Projects</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
+<p>
+  <a href="https://github.com/codewithmahad/JAVA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-java-dark.svg"><img src="assets/readme/lab-java-light.svg" width="86" height="22" alt="Java Lab"></picture></a>
+  <a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="86" height="22" alt="DSA Lab"></picture></a>
+  <a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="86" height="22" alt="SQL Lab"></picture></a>
 </p>
+
+<p><sub>For my OS coursework:</sub> <a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="82" height="20" alt="Linux Lab"></picture></a></p>
+
+<p>
+  <a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp;
+  <a href="https://shaikhmahad.vercel.app/">Portfolio</a>
+  <br clear="right">
+</p>
+
+<p><sub><a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub></p>

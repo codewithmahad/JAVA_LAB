@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="190" viewBox="0 0 240 190" role="img" aria-labelledby="title desc">
+<title id="title">The lab notebook</title>
+<desc id="desc">An open notebook with code on the left page, notes on the right, an orange bookmark, and a pencil. A shared illustration for personal learning labs.</desc>
+<ellipse cx="123" cy="178" rx="101" ry="6" fill="#1f2328" opacity=".07"/>
+<path d="M17 47C49 32 86 33 120 48C154 33 191 32 224 47V153C188 142 153 143 120 158C87 143 51 142 17 153Z" fill="#3a75b0"/>
+<path d="M21 46C52 32 87 34 120 48C153 34 188 32 220 46V148C187 137 153 139 120 153C86 139 52 137 21 148Z" fill="#f2f6fa" stroke="#7193b0" stroke-width="1.4"/>
+<path d="M19 39C53 25 87 28 120 43V147C86 133 52 132 19 145Z" fill="#ffffff" stroke="#7193b0" stroke-width="1.7" stroke-linejoin="round"/>
+<path d="M120 43C153 28 188 25 222 39V145C187 132 154 133 120 147Z" fill="#f2f6fa" stroke="#7193b0" stroke-width="1.7" stroke-linejoin="round"/>
+<path d="M120 45V146" stroke="#bfd0df" stroke-width="2"/>
+<path d="M184 30L197 31V77L190.5 71L184 75Z" fill="#f29111"/>
+<path d="M63 72L48 85L63 98M83 72L98 85L83 98" fill="none" stroke="#3a75b0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M77 69L69 101" fill="none" stroke="#f29111" stroke-width="3.3" stroke-linecap="round"/>
+<path d="M38 115C57 111 78 113 99 120M38 126C56 122 74 124 86 128" fill="none" stroke="#71869a" stroke-width="2.1" stroke-linecap="round"/>
+<path d="M141 64C151 60 164 57 174 57M141 79C159 72 179 70 205 76M141 92C160 85 182 84 201 89M141 105C151 101 166 99 179 99" fill="none" stroke="#71869a" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M154 161L207 108L218 119L165 172L150 176Z" fill="#f29111" stroke="#cb790c" stroke-width="1.2" stroke-linejoin="round"/>
+<path d="M207 108L213 102C215 100 217 100 219 102L224 107C226 109 226 111 224 113L218 119Z" fill="#3a75b0" stroke="#7193b0" stroke-width="1.2"/>
+<path d="M154 161L165 172L150 176Z" fill="#ead6b5"/>
+<path d="M150 176L153 166L160 173Z" fill="#374a5b"/>
+<path d="M160 161L208 113" stroke="#fff3cf" stroke-width="1.8" stroke-linecap="round" opacity=".75"/>
+</svg>
