@@ -189,14 +189,21 @@ Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal
 </p>
 
 <p>
-This is where I work through Java itself. In&#8239;<a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="77" height="20" align="texttop" alt="DSA_LAB"></picture></a>, I use the language to solve problems and compare approaches.
-<a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="80" height="20" align="texttop" alt="SQL_LAB"></picture></a> holds my query and database design practice, while&#8239;<a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="96" height="20" align="texttop" alt="LINUX_LAB"></picture></a> keeps the Linux and Bash notes from my OS coursework.
+This is where I work through Java itself. I use the language for problem solving in DSA, and keep queries and relational design in SQL. My Linux and Bash notes come from OS coursework.
 </p>
 
 <p>
-  <a href="https://leetcode.com/u/mahad2006/"><img src="assets/readme/leetcode-brand.svg" width="83" height="30" alt="LeetCode: my profile"></a>
-  <a href="https://www.hackerrank.com/codewithmahad"><img src="assets/readme/hackerrank-brand.svg" width="95" height="30" alt="HackerRank: my profile"></a>
-  <a href="https://codolio.com/profile/codewithmahad"><img src="assets/readme/codolio-brand.svg" width="78" height="30" alt="Codolio: my profile"></a>
+  <a href="https://github.com/codewithmahad/DSA_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-dsa-dark.svg"><img src="assets/readme/lab-dsa-light.svg" width="120" height="40" vspace="2" alt="DSA_LAB"></picture></a>
+  <a href="https://github.com/codewithmahad/SQL_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-sql-dark.svg"><img src="assets/readme/lab-sql-light.svg" width="120" height="40" vspace="2" alt="SQL_LAB"></picture></a>
+  <a href="https://github.com/codewithmahad/LINUX_LAB"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/lab-linux-dark.svg"><img src="assets/readme/lab-linux-light.svg" width="128" height="40" vspace="2" alt="LINUX_LAB"></picture></a>
+</p>
+
+<p>I also keep my wider coding practice on these profiles.</p>
+
+<p>
+  <a href="https://leetcode.com/u/mahad2006/"><img src="assets/readme/leetcode-brand.svg" width="110" height="40" alt="LeetCode: my profile"></a>
+  <a href="https://www.hackerrank.com/codewithmahad"><img src="assets/readme/hackerrank-brand.svg" width="126" height="40" alt="HackerRank: my profile"></a>
+  <a href="https://codolio.com/profile/codewithmahad"><img src="assets/readme/codolio-brand.svg" width="104" height="40" alt="Codolio: my profile"></a>
 </p>
 <!-- learning-labs:end -->
 
