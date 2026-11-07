@@ -8,7 +8,7 @@
 
 **Java concepts, runnable experiments, and the things I want to remember.**
 
-I keep this notebook for independent Java practice alongside my **Spring Boot backend work**. Small experiments, tests, and short notes help me understand the language behaviour behind application code.
+I keep my Java practice here so I can work through language questions in small programs, revisit mistakes, and carry a clearer understanding back into my **backend projects**.
 
 <details>
 <summary><strong>About this lab</strong></summary>
@@ -20,21 +20,22 @@ I study Java and DSA alongside application development, usually through focused 
 </details>
 
 <p>
-  <a href="#current-focus">Learning focus</a> &nbsp;·&nbsp;
-  <a href="#java-learning-map">Learning map</a> &nbsp;·&nbsp;
-  <a href="#recorded-experiments">Experiments &amp; revision</a> &nbsp;·&nbsp;
-  <a href="#working-setup">Working with the lab</a>
+  <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
+  <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
+  <a href="#working-setup">Build&nbsp;&amp;&nbsp;run</a> &nbsp;·&nbsp;
+  <a href="#beyond-java-lab">Beyond&nbsp;the&nbsp;lab</a>
 </p>
 
-<h2 id="current-focus">Learning focus</h2>
-
-**Starting point:** [Java 25 / Maven configuration](pom.xml). The roadmap is planned; Java examples and tests have not been added yet.
-
-**Next question:** where do `==` and `equals()` disagree? Compare shared references, equal values, and separately created objects.
+<table id="current-focus">
+  <tbody>
+    <tr><th scope="row">Recorded</th><td><a href="pom.xml">Java 25 / Maven setup</a>. No Java sources or tests yet.</td></tr>
+    <tr><th scope="row">Next</th><td>Object identity and equality: <code>==</code> versus <code>equals()</code>.</td></tr>
+  </tbody>
+</table>
 
 <h2 id="java-learning-map">Java learning map</h2>
 
-Everyday language and APIs come first, followed by backend correctness and runtime questions. **Core**, **Next**, and **Deep dive** keep those priorities visible inside each group. Topic links will identify recorded code, tests, or notes.
+My planned coverage for backend work: everyday language and APIs first, then runtime questions in more depth. Topic links will open recorded examples or notes.
 
 <details>
 <summary><strong>01 · Language fundamentals and OOP</strong></summary>
@@ -96,15 +97,6 @@ Everyday language and APIs come first, followed by backend correctness and runti
 - Source and bytecode, stack frames, heap objects, references, and garbage collection basics.
 - Reading stack traces and inspecting a running program with JDK tools.
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/java-execution-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/readme/java-execution-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/java-execution-dark.svg">
-  <img src="assets/readme/java-execution-light.svg" width="100%" alt="Java execution overview: javac compiles .java source into .class bytecode; the java launcher starts the JVM to load and execute the program.">
-</picture>
-
-<sub>The explicit compile-and-run path. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub>
-
 **Deep dive**
 
 - Class loading, initialization, reflection, annotations, and type erasure.
@@ -129,18 +121,23 @@ Everyday language and APIs come first, followed by backend correctness and runti
 
 <h2 id="recorded-experiments"><a id="java-in-practice"></a><a id="revision-notes"></a>Experiments &amp; revision</h2>
 
-Start with a question and predict the result. Write the smallest useful example, check normal and edge cases, then explain what happened. On the next visit, recall the explanation before opening the notes and try a variation.
+I start with a prediction, test it in a small program, and try an edge case. When I return to it, I explain the result before opening my notes.
 
-Keep the **question, JDK version, run command, observed result, and correction** beside the code. A short comment can capture a simple exercise; a test makes behaviour easier to check again. The most useful discoveries become **Things Java taught me**, linked to the example that supports them.
+**What I keep:** the question, exact command, result, and the detail that changed my understanding.
 
 <details>
-<summary><strong>Questions to work through</strong></summary>
+<summary><strong>Questions and what to record</strong></summary>
 
 | Question | Comparison to make |
 | :--- | :--- |
+| When do `==` and `equals()` disagree? | Shared references, equal values, and separate objects. |
 | What if a `HashMap` key changes? | Lookup before and after changing equality-related state. |
 | Can equal decimal values compare differently? | `BigDecimal.equals()` and `compareTo()`, with different scales. |
 | When does a resource close? | Normal completion, an exception, and cleanup that also fails. |
+
+Beside each example: **question · prediction · JDK version · run command · observed result · explanation**. A comment is enough for a simple observation; a test makes important behaviour easy to check again.
+
+For **Things Java taught me**, keep one finding tied to its source, including the input that exposed the mistake.
 
 </details>
 
@@ -149,6 +146,15 @@ Keep the **question, JDK version, run command, observed result, and correction**
 **JDK 25 · Maven · IntelliJ IDEA · Git**
 
 The [POM](pom.xml) sets compiler source and target to **25**, with no preview features enabled.
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/java-execution-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/readme/java-execution-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/java-execution-dark.svg">
+  <img src="assets/readme/java-execution-light.svg" width="100%" alt="The lab's compile-and-run path: Java source under src/main/java becomes bytecode under target/classes; the java launcher starts the JVM to load and execute a chosen class.">
+</picture>
+
+<p><sub>The compile-and-run path in Maven's standard layout. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub></p>
 
 <details>
 <summary><strong>Open, check, and run</strong></summary>
@@ -159,8 +165,10 @@ cd JAVA_LAB
 java -version
 javac -version
 mvn -version
-mvn compile
+mvn validate
 ```
+
+`mvn validate` checks the project configuration. Compilation and execution follow with the first source example.
 
 Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal commands need a local Maven installation. In IntelliJ IDEA, open `pom.xml` and select JDK 25 for the project and Maven runner.
 
@@ -188,7 +196,7 @@ Replace `fully.qualified.ClassName` with the entry's actual package and class.
 
 <h2 id="beyond-java-lab">Beyond JAVA_LAB</h2>
 
-Application work gives these language questions a larger setting. In [**DeployLatch**](https://github.com/codewithmahad/deploylatch), a Java service is what I deploy, check, and recover on Linux.
+I use [**DeployLatch**](https://github.com/codewithmahad/deploylatch) to deploy and recover a Java service on Linux. This notebook is where I can return to the language questions behind that work.
 
 Alongside this notebook: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB) for problem solving · [**SQL_LAB**](https://github.com/codewithmahad/SQL_LAB) for queries and relational design · [**LINUX_LAB**](https://github.com/codewithmahad/LINUX_LAB) for Linux and Bash.
 
