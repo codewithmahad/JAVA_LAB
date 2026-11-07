@@ -1,8 +1,8 @@
 <h1 id="java_lab">
-  <a href="https://dev.java/"><img src="assets/logos/java.svg" align="right" width="14%" alt="Java coffee-cup mark."></a>
+  <a href="https://www.java.com/"><img src="assets/logos/java-site.svg" align="right" width="18%" alt="Java coffee-cup mark in blue and orange."></a>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/readme/java-title-dark.svg">
-    <img src="assets/readme/java-title-light.svg" width="70%" height="56" align="texttop" alt="JAVA_LAB">
+    <img src="assets/readme/java-title-light.svg" width="64%" height="52" align="texttop" alt="JAVA_LAB">
   </picture>
 </h1>
 
@@ -19,19 +19,17 @@ I study Java and DSA alongside application development, usually through focused 
 
 </details>
 
+<p id="current-focus">
+  <strong>Next in the lab:</strong> object identity and equality — <code>==</code> versus <code>equals()</code>.<br>
+  <sub><a href="pom.xml">JDK 25 · Maven</a> · first examples and tests planned.</sub>
+</p>
+
 <p>
   <a href="#java-learning-map">Learning&nbsp;map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments&nbsp;&amp;&nbsp;revision</a> &nbsp;·&nbsp;
   <a href="#working-setup">Setup</a> &nbsp;·&nbsp;
   <a href="#beyond-java-lab">Beyond&nbsp;the&nbsp;lab</a>
 </p>
-
-<table id="current-focus">
-  <tbody>
-    <tr><th scope="row">Recorded</th><td><a href="pom.xml">Java 25 / Maven setup</a>. No lab examples or tests yet.</td></tr>
-    <tr><th scope="row">Next</th><td>Object identity and equality: <code>==</code> versus <code>equals()</code>.</td></tr>
-  </tbody>
-</table>
 
 <h2 id="java-learning-map">Java learning map</h2>
 
@@ -158,7 +156,7 @@ The [POM](pom.xml) sets compiler source and target to **25**, with no preview fe
   <img src="assets/readme/java-execution-light.svg" width="100%" alt="The lab's compile-and-run path: Java source under src/main/java becomes bytecode under target/classes; the java launcher starts the JVM to load and execute a chosen class.">
 </picture>
 
-<p><sub>The compile-and-run path in Maven's standard layout. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub></p>
+<p><sub>Standard Maven layout · JDK 25: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub></p>
 
 <details>
 <summary><strong>Open and check</strong></summary>
