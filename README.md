@@ -1,107 +1,121 @@
 <h1 id="java_lab">
-  <a href="https://dev.java/"><img src="assets/logos/java.svg" align="right" width="88" alt="Java coffee-cup mark."></a>
-  JAVA_LAB
+  <a href="https://dev.java/"><img src="assets/logos/java.svg" align="right" width="14%" alt="Java coffee-cup mark."></a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/java-title-dark.svg">
+    <img src="assets/readme/java-title-light.svg" width="70%" height="56" align="texttop" alt="JAVA_LAB">
+  </picture>
 </h1>
 
 **Java concepts, runnable experiments, and the things I want to remember.**
 
-<sub>Core Java · Language experiments · JVM understanding · Revision</sub>
-
-I keep this Java-only workspace alongside my **Java/Spring Boot backend projects**. It's where I want to work through language questions in small programs, save the results, and leave enough context to understand them months later. The code, corrections, and Git history will keep a record of that practice.
-
-**Starting point:** [Maven project configured for Java 25](pom.xml). Java source files and experiment notes are still to be added.
+I'm using this workspace to strengthen the **Java behind my backend projects**. I want to test language behaviour in small programs, keep the corrections, and return to the same ideas as my Spring Boot and DSA work grows. Code, tests, and short notes will form the record of that practice.
 
 <p>
+  <a href="#current-focus">Current focus</a> &nbsp;·&nbsp;
   <a href="#java-learning-map">Learning map</a> &nbsp;·&nbsp;
   <a href="#recorded-experiments">Experiments</a> &nbsp;·&nbsp;
   <a href="#working-setup">Working setup</a> &nbsp;·&nbsp;
   <a href="#revision-notes">Revision notes</a>
 </p>
 
+<h2 id="current-focus">Current focus</h2>
+
+**Recorded:** [Java 25 / Maven configuration](pom.xml). Source examples and tests are still to be added.
+
+**Next session:** object identity and value equality — predict where `==` and `equals()` differ, write a small example, and check an edge case. **After that:** collection behaviour and exception handling.
+
 <h2 id="java-learning-map">Java learning map</h2>
 
-The areas I want to study and revisit. **All six groups are planned.** Topic names will link to source files as I add experiments.
+The Java I want for backend engineering, ordered by practical use:
+
+**P1 · Everyday code** &nbsp; / &nbsp; **P2 · Correctness and runtime basics** &nbsp; / &nbsp; **P3 · Deeper investigation**
+
+All topics are **planned**. As I add work, topic names will link to the code, tests, or notes. These priorities guide revision alongside application work.
 
 <details>
 <summary><strong>01 · Language fundamentals and OOP</strong></summary>
 
-- Types, operators, control flow, methods, arrays, and strings.
-- Classes, constructors, access modifiers, encapsulation, and composition.
-- Inheritance, interfaces, abstract classes, and polymorphism.
-- Enums, records, immutability, and object identity versus equality.
+- **P1** · Types, control flow, methods, arrays, strings, and reference versus value equality.
+- **P1** · Classes, constructors, interfaces, inheritance, polymorphism, and composition.
+- **P1** · Checking behaviour with JUnit assertions, boundary cases, and expected exceptions.
+- **P2** · Enums, records, immutable objects, and defensive copying.
 
 </details>
 
 <details>
 <summary><strong>02 · Collections, generics, and exceptions</strong></summary>
 
-- `List`, `Set`, `Map`, queues, iteration, and choosing a collection.
-- `equals()`, `hashCode()`, ordering, `Comparable`, and `Comparator`.
-- Generic types and methods, bounds, wildcards, and type erasure.
-- Checked and unchecked exceptions, custom exceptions, and resource cleanup.
+- **P1** · Choosing a `List`, `Set`, `Map`, or queue; iteration and collection behaviour.
+- **P1** · `equals()`, `hashCode()`, generic types, bounds, and wildcards.
+- **P1** · Checked and unchecked exceptions, propagation, wrapping, and useful error context.
+- **P2** · Mutable keys, ordering, `Comparable`, and `Comparator`.
 
 </details>
 
 <details>
-<summary><strong>03 · Functional Java and I/O</strong></summary>
+<summary><strong>03 · Functional Java and platform APIs</strong></summary>
 
-- Lambdas, functional interfaces, and method references.
-- Streams, collectors, `Optional`, and comparisons with ordinary loops.
-- Byte and character streams, encodings, and file handling.
-- `Path`, `Files`, NIO, serialization, and deserialization.
-
-</details>
-
-<details>
-<summary><strong>04 · Concurrency</strong></summary>
-
-- Threads, shared mutable state, race conditions, and visibility.
-- Synchronization, locks, atomics, and concurrent collections.
-- Executors, task cancellation, futures, and `CompletableFuture`.
-- Virtual threads and the difference between concurrency and parallelism.
+- **P1** · Lambdas, method references, streams, collectors, `Optional`, and comparisons with loops.
+- **P2** · File I/O, encodings, `Path`, `Files`, and `try-with-resources`.
+- **P2** · `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
+- **P2** · `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
+- **P2** · Small HTTP client and JDBC exercises, independent of a framework.
 
 </details>
 
 <details>
-<summary><strong>05 · JVM and language internals</strong></summary>
+<summary><strong>04 · Concurrency and shared state</strong></summary>
 
-- Source code, bytecode, class loading, and initialization.
-- Stack frames, heap objects, references, and garbage collection.
-- The Java Memory Model and happens-before relationships.
-- Reflection, annotations, and inspecting bytecode with `javap`.
+- **P2** · Threads, race conditions, visibility, synchronization, and atomic operations.
+- **P2** · Executors, futures, cancellation, and concurrent collections.
+- **P3** · `CompletableFuture`, virtual threads, and comparisons between concurrency approaches.
 
 </details>
 
 <details>
-<summary><strong>06 · Modern Java and experiments</strong></summary>
+<summary><strong>05 · JVM, diagnostics, and internals</strong></summary>
 
-- Switch expressions, pattern matching, and sealed types.
-- Language changes across JDK versions, including preview features.
-- Small API comparisons and experiments that test an assumption.
-- Performance measurements with warmup, repeatable inputs, and JMH.
+- **P2** · Source and bytecode, stack frames, heap objects, references, and garbage collection basics.
+- **P2** · Reading stack traces and inspecting a running program with JDK tools.
+- **P3** · Class loading, initialization, reflection, annotations, and type erasure.
+- **P3** · The Java Memory Model, happens-before relationships, and GC diagnostics.
+
+</details>
+
+<details>
+<summary><strong>06 · Modern Java and measured experiments</strong></summary>
+
+- **P2** · Switch expressions, pattern matching, and sealed types in small examples.
+- **P2** · JDK version comparisons and the requirements of preview features.
+- **P3** · Inspecting generated bytecode with `javap` and comparing implementations.
+- **P3** · Performance experiments with JMH, warmup, repeatable inputs, and stated limits.
 
 </details>
 
 <h2 id="recorded-experiments">Recorded experiments</h2>
 
-No Java experiments are committed yet. This section will become a short index of the examples worth returning to, each linked to its code and observed result.
+The code index starts with the first committed example. I'll link the experiments worth revisiting here, with their question, result, and any useful correction.
 
 <details>
-<summary><strong>Questions for the first experiments · planned</strong></summary>
+<summary><strong>Questions to work through · planned</strong></summary>
 
-| Question to test | What I want to compare |
+| Question | Comparison to make |
 | :--- | :--- |
-| When do `==` and `equals()` disagree? | Same reference, equal values, and separately created objects. |
-| What if a `HashMap` key changes? | Lookup before and after changing state used by `equals()` and `hashCode()`. |
-| When is a stream easier to read? | The same transformation as a loop and a stream, including empty input. |
-| What breaks with shared mutable data? | An unprotected counter and a synchronized or atomic version. |
-| How does resource cleanup behave? | `try-with-resources` on normal completion and when an exception is thrown. |
+| When do `==` and `equals()` disagree? | Same reference, equal values, and separate objects. |
+| What if a `HashMap` key changes? | Lookup before and after changing equality-related state. |
+| Can equal decimal values compare differently? | `BigDecimal.equals()` and `compareTo()`, with different scales. |
+| When does a resource close? | Normal completion, an exception, and cleanup that also fails. |
 
 </details>
 
-<h2 id="java-in-practice">Java in practice</h2>
+<h2 id="java-in-practice">How I practise</h2>
 
-My approach here is to start with a question, predict the result, and write the smallest program that can check it. Then change an input or assumption and explain the difference. When I get something wrong, I want to keep the correction beside the code.
+One focused question can carry a weekend's Java practice:
+
+- **First session:** predict the result, implement a small example, and check normal and edge cases.
+- **Return session:** explain it without the notes, change an assumption, and save the correction or a useful variation.
+
+Keep the question, JDK version, exact run command, and observed result beside the code. Add a test when it makes the behaviour easier to check again; a short comment is enough for a simple exercise.
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/java-execution-mobile-dark.svg">
@@ -110,18 +124,16 @@ My approach here is to start with a question, predict the result, and write the 
   <img src="assets/readme/java-execution-light.svg" width="100%" alt="Java execution overview: javac compiles .java source into .class bytecode; the java launcher starts the JVM to load and execute the program.">
 </picture>
 
-<sub>A simplified view of the explicit compile-and-run path. See the JDK 25 command references for <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> and <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub>
-
-For each useful experiment, I'll keep the **question, JDK version, run command, expected result, actual result, and explanation** together. A later revision should let me rerun it and explain the behaviour without relying on the old comments.
+<sub>The explicit compile-and-run path. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub>
 
 <h2 id="working-setup">Working setup</h2>
 
 **JDK 25 · Maven · IntelliJ IDEA · Git**
 
-The [POM](pom.xml) sets both compiler source and target to **25**. JDK 25 is the baseline for this workspace; preview features are not enabled in the current configuration.
+The [POM](pom.xml) sets compiler source and target to **25**. Preview features are not enabled; JUnit is planned and has not been added as a dependency.
 
 <details>
-<summary><strong>Open and check the workspace</strong></summary>
+<summary><strong>Open, check, and run</strong></summary>
 
 ```sh
 git clone https://github.com/codewithmahad/JAVA_LAB.git
@@ -132,54 +144,39 @@ mvn -version
 mvn compile
 ```
 
-Check that Maven reports JDK 25 as well. There's no Maven Wrapper in this repository, so the terminal commands use a local Maven installation. In IntelliJ IDEA, open `pom.xml` as a project and select JDK 25 for the project and Maven runner.
+Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal commands need a local Maven installation. In IntelliJ IDEA, open `pom.xml` and select JDK 25 for the project and Maven runner.
 
-At this stage, compilation has no Java source files to process.
+Source packages will be added with their first implementation under `src/main/java/`; tests will use `src/test/java/`. Neither directory exists yet, so compilation currently has no Java sources to process.
 
-</details>
-
-<details>
-<summary><strong>Run an entry once source is added</strong></summary>
-
-I'll use Maven's [standard source layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html): `src/main/java/` for examples and `src/test/java/` for tests where useful. Those directories aren't present yet; topic packages will be added with their first implementation.
-
-For a compiled example with a `main` method, the command pattern is:
+Once an entry has a `main` method, its run command will follow this pattern:
 
 ```sh
 mvn compile
 java -cp target/classes fully.qualified.ClassName
 ```
 
-Replace `fully.qualified.ClassName` with the entry's actual package and class name. Each recorded experiment will include its exact command. IntelliJ's run action is another option once that entry exists.
+Replace `fully.qualified.ClassName` with the entry's actual package and class. Each experiment will include its exact command.
 
 </details>
 
 <h2 id="revision-notes">Revision notes</h2>
 
-The notes I want beside an experiment are the details I'd otherwise forget: which input exposed the mistake, why the first explanation was wrong, and what changed after the fix.
+**Things Java taught me** will grow from the recorded experiments: the assumption I got wrong, the case that exposed it, and the explanation I want to remember. Each note will point back to its code or test.
 
 <details>
-<summary><strong>Things Java taught me</strong></summary>
+<summary><strong>References within reach</strong></summary>
 
-I'll add conclusions here as experiments are recorded, with a link back to the code that supports each one. Each note should preserve the original assumption, the result, and the edge case worth remembering.
-
-</details>
-
-<details>
-<summary><strong>References I want within reach · Java 25</strong></summary>
-
-- **API contracts:** [Java SE 25 API](https://docs.oracle.com/en/java/javase/25/docs/api/index.html).
-- **Language rules:** [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se25/html/index.html).
-- **Runtime behaviour:** [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se25/html/index.html).
-- **Explanations and examples:** [Dev.java learning topics](https://dev.java/learn/).
+- **API contracts:** [Java SE 25 API](https://docs.oracle.com/en/java/javase/25/docs/api/index.html) · [Dates and time](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/package-summary.html) · [BigDecimal](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/math/BigDecimal.html).
+- **Language and runtime:** [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se25/html/index.html) · [JVM Specification](https://docs.oracle.com/javase/specs/jvms/se25/html/index.html).
+- **Worked explanations:** [Dev.java](https://dev.java/learn/). **Testing reference:** [JUnit User Guide](https://docs.junit.org/current/user-guide/).
 
 </details>
 
 <h2 id="beyond-java-lab">Beyond JAVA_LAB</h2>
 
-Java is the language behind my backend direction. In [**DeployLatch**](https://github.com/codewithmahad/deploylatch), a Java service gives me something concrete to deploy, check, and recover on Linux.
+Application work gives these language questions a larger setting. In [**DeployLatch**](https://github.com/codewithmahad/deploylatch), a Java service is what I deploy, check, and recover on Linux.
 
-The other labs hold the work around it: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB) for problem solving, [**SQL_LAB**](https://github.com/codewithmahad/SQL_LAB) for queries and relational design, and [**LINUX_LAB**](https://github.com/codewithmahad/LINUX_LAB) for Linux and Bash practice.
+Alongside this notebook: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB) for problem solving · [**SQL_LAB**](https://github.com/codewithmahad/SQL_LAB) for queries and relational design · [**LINUX_LAB**](https://github.com/codewithmahad/LINUX_LAB) for Linux and Bash.
 
 <p align="center">
   <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
