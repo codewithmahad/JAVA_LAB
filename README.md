@@ -197,5 +197,5 @@ Alongside this notebook: [**DSA_LAB**](https://github.com/codewithmahad/DSA_LAB)
 
 <p align="center">
   <strong>Shaikh Mahad Ud Din</strong> · Java Backend Development<br>
-  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad/deploylatch">DeployLatch</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
+  <sub><a href="https://github.com/codewithmahad">GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/codewithmahad?tab=repositories">Projects</a> &nbsp;·&nbsp; <a href="assets/README.md">Artwork credits</a> &nbsp;·&nbsp; <a href="#java_lab">Back to top ↑</a></sub>
 </p>
