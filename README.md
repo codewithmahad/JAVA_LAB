@@ -8,114 +8,93 @@
 
 **Java concepts, runnable experiments, and the things I want to remember.**
 
-I'm using this workspace to strengthen the **Java behind my backend projects**. I want to test language behaviour in small programs, keep the corrections, and return to the same ideas as my Spring Boot and DSA work grows. Code, tests, and short notes will form the record of that practice.
+I keep this notebook for independent Java practice alongside my **Spring Boot backend work**. Small experiments, tests, and short notes help me understand the language behaviour behind application code.
+
+<details>
+<summary><strong>About this lab</strong></summary>
+
+A framework can hide a language question behind configuration and application code. Here I can isolate it: two object references, one collection, a decimal calculation, or a shared counter.
+
+I study Java and DSA alongside application development, usually through focused weekend sessions. This notebook keeps the language work easy to pick up again, with Git preserving the attempts and corrections.
+
+</details>
 
 <p>
-  <a href="#current-focus">Current focus</a> &nbsp;·&nbsp;
+  <a href="#current-focus">Learning focus</a> &nbsp;·&nbsp;
   <a href="#java-learning-map">Learning map</a> &nbsp;·&nbsp;
-  <a href="#recorded-experiments">Experiments</a> &nbsp;·&nbsp;
-  <a href="#working-setup">Working setup</a> &nbsp;·&nbsp;
-  <a href="#revision-notes">Revision notes</a>
+  <a href="#recorded-experiments">Experiments &amp; revision</a> &nbsp;·&nbsp;
+  <a href="#working-setup">Working with the lab</a>
 </p>
 
-<h2 id="current-focus">Current focus</h2>
+<h2 id="current-focus">Learning focus</h2>
 
-**Recorded:** [Java 25 / Maven configuration](pom.xml). Source examples and tests are still to be added.
+**Starting point:** [Java 25 / Maven configuration](pom.xml). The roadmap is planned; Java examples and tests have not been added yet.
 
-**Next session:** object identity and value equality — predict where `==` and `equals()` differ, write a small example, and check an edge case. **After that:** collection behaviour and exception handling.
+**Next question:** where do `==` and `equals()` disagree? Compare shared references, equal values, and separately created objects.
 
 <h2 id="java-learning-map">Java learning map</h2>
 
-The Java I want for backend engineering, ordered by practical use:
-
-**P1 · Everyday code** &nbsp; / &nbsp; **P2 · Correctness and runtime basics** &nbsp; / &nbsp; **P3 · Deeper investigation**
-
-All topics are **planned**. As I add work, topic names will link to the code, tests, or notes. These priorities guide revision alongside application work.
+Everyday language and APIs come first, followed by backend correctness and runtime questions. **Core**, **Next**, and **Deep dive** keep those priorities visible inside each group. Topic links will identify recorded code, tests, or notes.
 
 <details>
 <summary><strong>01 · Language fundamentals and OOP</strong></summary>
 
-- **P1** · Types, control flow, methods, arrays, strings, and reference versus value equality.
-- **P1** · Classes, constructors, interfaces, inheritance, polymorphism, and composition.
-- **P1** · Checking behaviour with JUnit assertions, boundary cases, and expected exceptions.
-- **P2** · Enums, records, immutable objects, and defensive copying.
+**Core**
+
+- Types, control flow, methods, arrays, strings, and reference versus value equality.
+- Classes, constructors, interfaces, inheritance, polymorphism, and composition.
+- Checking behaviour with JUnit assertions, boundary cases, and expected exceptions.
+
+**Next:** enums, records, immutable objects, and defensive copying.
 
 </details>
 
 <details>
 <summary><strong>02 · Collections, generics, and exceptions</strong></summary>
 
-- **P1** · Choosing a `List`, `Set`, `Map`, or queue; iteration and collection behaviour.
-- **P1** · `equals()`, `hashCode()`, generic types, bounds, and wildcards.
-- **P1** · Checked and unchecked exceptions, propagation, wrapping, and useful error context.
-- **P2** · Mutable keys, ordering, `Comparable`, and `Comparator`.
+**Core**
+
+- Choosing a `List`, `Set`, `Map`, or queue; iteration and collection behaviour.
+- `equals()`, `hashCode()`, generic types, bounds, and wildcards.
+- Checked and unchecked exceptions, propagation, wrapping, and useful error context.
+
+**Next:** mutable keys, ordering, `Comparable`, and `Comparator`.
 
 </details>
 
 <details>
 <summary><strong>03 · Functional Java and platform APIs</strong></summary>
 
-- **P1** · Lambdas, method references, streams, collectors, `Optional`, and comparisons with loops.
-- **P2** · File I/O, encodings, `Path`, `Files`, and `try-with-resources`.
-- **P2** · `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
-- **P2** · `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
-- **P2** · Small HTTP client and JDBC exercises, independent of a framework.
+**Core:** lambdas, method references, streams, collectors, `Optional`, and comparisons with loops.
+
+**Next**
+
+- File I/O, encodings, `Path`, `Files`, and `try-with-resources`.
+- `java.time` — instants, dates, durations, time zones, and a controllable `Clock`.
+- `BigDecimal` — precision, scale, rounding, and comparisons in money calculations.
+- Small HTTP client and JDBC exercises, independent of a framework.
 
 </details>
 
 <details>
 <summary><strong>04 · Concurrency and shared state</strong></summary>
 
-- **P2** · Threads, race conditions, visibility, synchronization, and atomic operations.
-- **P2** · Executors, futures, cancellation, and concurrent collections.
-- **P3** · `CompletableFuture`, virtual threads, and comparisons between concurrency approaches.
+**Next**
+
+- Threads, race conditions, visibility, synchronization, and atomic operations.
+- Executors, futures, cancellation, and concurrent collections.
+
+**Deep dive:** `CompletableFuture`, virtual threads, and comparisons between concurrency approaches.
 
 </details>
 
 <details>
 <summary><strong>05 · JVM, diagnostics, and internals</strong></summary>
 
-- **P2** · Source and bytecode, stack frames, heap objects, references, and garbage collection basics.
-- **P2** · Reading stack traces and inspecting a running program with JDK tools.
-- **P3** · Class loading, initialization, reflection, annotations, and type erasure.
-- **P3** · The Java Memory Model, happens-before relationships, and GC diagnostics.
+**Next**
 
-</details>
-
-<details>
-<summary><strong>06 · Modern Java and measured experiments</strong></summary>
-
-- **P2** · Switch expressions, pattern matching, and sealed types in small examples.
-- **P2** · JDK version comparisons and the requirements of preview features.
-- **P3** · Inspecting generated bytecode with `javap` and comparing implementations.
-- **P3** · Performance experiments with JMH, warmup, repeatable inputs, and stated limits.
-
-</details>
-
-<h2 id="recorded-experiments">Recorded experiments</h2>
-
-The code index starts with the first committed example. I'll link the experiments worth revisiting here, with their question, result, and any useful correction.
-
-<details>
-<summary><strong>Questions to work through · planned</strong></summary>
-
-| Question | Comparison to make |
-| :--- | :--- |
-| When do `==` and `equals()` disagree? | Same reference, equal values, and separate objects. |
-| What if a `HashMap` key changes? | Lookup before and after changing equality-related state. |
-| Can equal decimal values compare differently? | `BigDecimal.equals()` and `compareTo()`, with different scales. |
-| When does a resource close? | Normal completion, an exception, and cleanup that also fails. |
-
-</details>
-
-<h2 id="java-in-practice">How I practise</h2>
-
-One focused question can carry a weekend's Java practice:
-
-- **First session:** predict the result, implement a small example, and check normal and edge cases.
-- **Return session:** explain it without the notes, change an assumption, and save the correction or a useful variation.
-
-Keep the question, JDK version, exact run command, and observed result beside the code. Add a test when it makes the behaviour easier to check again; a short comment is enough for a simple exercise.
+- Source and bytecode, stack frames, heap objects, references, and garbage collection basics.
+- Reading stack traces and inspecting a running program with JDK tools.
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/java-execution-mobile-dark.svg">
@@ -126,11 +105,50 @@ Keep the question, JDK version, exact run command, and observed result beside th
 
 <sub>The explicit compile-and-run path. JDK 25 references: <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html">javac</a> · <a href="https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html">java</a>.</sub>
 
-<h2 id="working-setup">Working setup</h2>
+**Deep dive**
+
+- Class loading, initialization, reflection, annotations, and type erasure.
+- The Java Memory Model, happens-before relationships, and GC diagnostics.
+
+</details>
+
+<details>
+<summary><strong>06 · Modern Java and measured experiments</strong></summary>
+
+**Next**
+
+- Switch expressions, pattern matching, and sealed types in small examples.
+- JDK version comparisons and the requirements of preview features.
+
+**Deep dive**
+
+- Inspecting generated bytecode with `javap` and comparing implementations.
+- Performance experiments with JMH, warmup, repeatable inputs, and stated limits.
+
+</details>
+
+<h2 id="recorded-experiments"><a id="java-in-practice"></a><a id="revision-notes"></a>Experiments &amp; revision</h2>
+
+Start with a question and predict the result. Write the smallest useful example, check normal and edge cases, then explain what happened. On the next visit, recall the explanation before opening the notes and try a variation.
+
+Keep the **question, JDK version, run command, observed result, and correction** beside the code. A short comment can capture a simple exercise; a test makes behaviour easier to check again. The most useful discoveries become **Things Java taught me**, linked to the example that supports them.
+
+<details>
+<summary><strong>Questions to work through</strong></summary>
+
+| Question | Comparison to make |
+| :--- | :--- |
+| What if a `HashMap` key changes? | Lookup before and after changing equality-related state. |
+| Can equal decimal values compare differently? | `BigDecimal.equals()` and `compareTo()`, with different scales. |
+| When does a resource close? | Normal completion, an exception, and cleanup that also fails. |
+
+</details>
+
+<h2 id="working-setup">Working with the lab</h2>
 
 **JDK 25 · Maven · IntelliJ IDEA · Git**
 
-The [POM](pom.xml) sets compiler source and target to **25**. Preview features are not enabled; JUnit is planned and has not been added as a dependency.
+The [POM](pom.xml) sets compiler source and target to **25**, with no preview features enabled.
 
 <details>
 <summary><strong>Open, check, and run</strong></summary>
@@ -146,22 +164,18 @@ mvn compile
 
 Use JDK 25 for both the project and Maven. There's no Maven Wrapper, so terminal commands need a local Maven installation. In IntelliJ IDEA, open `pom.xml` and select JDK 25 for the project and Maven runner.
 
-Source packages will be added with their first implementation under `src/main/java/`; tests will use `src/test/java/`. Neither directory exists yet, so compilation currently has no Java sources to process.
+Use `src/main/java/` for examples and `src/test/java/` for tests. JUnit needs to be added to the POM with the first test.
 
-Once an entry has a `main` method, its run command will follow this pattern:
+For an entry with a `main` method, the command pattern is:
 
 ```sh
 mvn compile
 java -cp target/classes fully.qualified.ClassName
 ```
 
-Replace `fully.qualified.ClassName` with the entry's actual package and class. Each experiment will include its exact command.
+Replace `fully.qualified.ClassName` with the entry's actual package and class.
 
 </details>
-
-<h2 id="revision-notes">Revision notes</h2>
-
-**Things Java taught me** will grow from the recorded experiments: the assumption I got wrong, the case that exposed it, and the explanation I want to remember. Each note will point back to its code or test.
 
 <details>
 <summary><strong>References within reach</strong></summary>
