@@ -13,6 +13,19 @@ target/
 ### Custom Backend Rules ###
 *.class
 *.log
+*.log.*
+logs/
+
+### Local secrets ###
+.env
+.env.*
+!.env.example
+secrets.properties
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
 
 ### Eclipse ###
 .apt_generated
